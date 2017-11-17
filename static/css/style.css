@@ -1,0 +1,19 @@
+@font-face { font-family: "futurabookc-webfont"; src: url("../fonts/futurabookc-webfont.woff2") format("woff2"), url("../fonts/futurabookc-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "futurademic-webfont"; src: url("../fonts/futurademic-webfont.woff2") format("woff2"), url("../fonts/futurademic-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
+body { min-width: 2px; -webkit-font-smoothing: antialiased !important; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+
+.source-page { background-color: #EC4061; padding: 1px 20px; min-height: 100%; }
+.source-page__title { font-size: 13px; line-height: 1.23; letter-spacing: 3px; text-transform: uppercase; color: #fff; text-align: center; margin: 10px 20px 22px; font-family: "futurabookc-webfont", Arial, sans-serif; font-weight: 300; }
+
+.page-prev { position: absolute; top: 11px; left: 20px; font-size: 0; }
+
+#back { display: inline-block; width: 8px; height: 14px; fill: #fff; }
+
+.source__title { color: #FFF; font-size: 13px; line-height: 1.3; text-align: center; margin: 0 0 20px; font-family: "futurademic-webfont", Arial, sans-serif; }
+.source__list { font-size: 0; margin: 0; list-style: none; }
+.source__item { display: block; margin-bottom: 10px; }
+.source__desc { font-size: 13px; line-height: 1.38; color: #fff; font-family: "futurabookc-webfont", Arial, sans-serif; font-weight: 300; }
+.source__index { display: inline-block; text-decoration: none; color: #fff; }
+.source__index:hover { opacity: 0.8; }
+.source__link { display: inline-block; max-width: 100%; text-decoration: none; color: #fff; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
+.source__link:hover { opacity: 0.8; }

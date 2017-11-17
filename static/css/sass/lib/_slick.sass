@@ -1,0 +1,145 @@
+.slick-slider
+	position: relative
+	display: block
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+.slick-list
+	position: relative
+	overflow: hidden
+	display: block
+	margin: 0
+	padding: 0
+	&:focus
+		outline: none
+	.slick-loading &
+		background: white
+	&.dragging
+		cursor: pointer
+		cursor: hand
+
+.slick-slider .slick-list,
+.slick-track,
+.slick-slide,
+	transform: translate3d(0, 0, 0)
+	outline: none
+.slick-slide img
+	transform: translate3d(-50%, -50%, 0)
+.slick-track
+	position: relative
+	left: 0
+	top: 0
+	display: block
+	zoom: 1
+	&:before,
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+	.slick-loading &
+		visibility: hidden
+
+.slick-slide
+	float: left
+	height: 100%
+	min-height: 1px
+	img
+		display: block
+		// max-width: 100%
+	&.slick-loading img
+		display: none
+	&.dragging img
+		pointer-events: none
+	.slick-initialized &
+		display: block
+	.slick-loading &
+		visibility: hidden
+	.slick-vertical &
+		display: block
+		height: auto
+		border: 1px solid transparent
+
+.slick-prev,
+.slick-next
+	position: absolute
+	top: 50%
+	right: auto
+	left: -20px
+	height: 42px
+	width: 42px
+	+hide-text
+	margin-top: -21px
+	z-index: 1
+	background: #fff
+	border: 1px solid $border
+	border-radius: 100%
+	+tr(.4s)
+	+r(1200)
+		left: 5px
+	&:hover
+		+scale(.9)
+	&:focus
+		outline: none
+	&.slick-disabled
+		opacity: 0
+		cursor: default
+		+gray
+	&:before
+		content: ""
+		display: inline-block
+		width: 8px
+		height: 13px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%) rotate(180deg)
+		+rotate(180)
+		transform-origin: 20% 25%
+		background-image: url('../svg/icon-prev-orange.svg')
+.slick-next
+	right: 2px
+	left: auto
+	+r(1200)
+		left: auto
+	+r(1000)
+		right: 24px
+	&:before
+		content: ""
+		display: inline-block
+		transform: translate(-50%, -50%) rotate(0deg)
+		background-image: url('../svg/icon-prev-orange.svg')
+
+.slick-dots
+	position: absolute
+	margin: 0
+	bottom: 0px
+	left: 50%
+	+trx(-50%)
+	font-size: 0
+	li
+		position: relative
+		display: inline-block
+		padding: 0 4px
+		&.slick-active
+			button
+				background: $orange
+	button
+		display: block
+		width: 10px
+		height: 10px
+		background: rgba(255, 255, 255, .5)
+		cursor: pointer
+		border: none
+		outline: none
+		+hide-text
+		border-radius: 50%
+		border: 2px solid $orange

@@ -1,0 +1,107 @@
+$icons: (0:0)
+$icons: map-merge($icons,(icon-check-green: (X: -70px, Y:0px, W: 20px, H: 21px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon-check-red: (X: -27px, Y:-36px, W: 21px, H: 22px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon-cor-comment: (X: 0px, Y:0px, W: 30px, H: 32px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon-f: (X: -94px, Y:0px, W: 6px, H: 13px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon-lupa: (X: -70px, Y:-25px, W: 16px, H: 16px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon-plus: (X: 0px, Y:-69px, W: 10px, H: 11px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon-tw: (X: -70px, Y:-45px, W: 14px, H: 10px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon-vk: (X: -52px, Y:-36px, W: 14px, H: 8px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(marker: (X: 0px, Y:-36px, W: 23px, H: 29px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(tw: (X: -34px, Y:0px, W: 32px, H: 26px, TW: 100px, TH: 80px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
+
+//
+//.icon-icon-check-green
+//	width: 20px
+//	height: 21px
+//	background-image: url('../img/icons.png')
+//	background-position: -70px 0px
+//
+//.icon-icon-check-red
+//	width: 21px
+//	height: 22px
+//	background-image: url('../img/icons.png')
+//	background-position: -27px -36px
+//
+//.icon-icon-cor-comment
+//	width: 30px
+//	height: 32px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px 0px
+//
+//.icon-icon-f
+//	width: 6px
+//	height: 13px
+//	background-image: url('../img/icons.png')
+//	background-position: -94px 0px
+//
+//.icon-icon-lupa
+//	width: 16px
+//	height: 16px
+//	background-image: url('../img/icons.png')
+//	background-position: -70px -25px
+//
+//.icon-icon-plus
+//	width: 10px
+//	height: 11px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -69px
+//
+//.icon-icon-tw
+//	width: 14px
+//	height: 10px
+//	background-image: url('../img/icons.png')
+//	background-position: -70px -45px
+//
+//.icon-icon-vk
+//	width: 14px
+//	height: 8px
+//	background-image: url('../img/icons.png')
+//	background-position: -52px -36px
+//
+//.icon-marker
+//	width: 23px
+//	height: 29px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -36px
+//
+//.icon-tw
+//	width: 32px
+//	height: 26px
+//	background-image: url('../img/icons.png')
+//	background-position: -34px 0px
+//
