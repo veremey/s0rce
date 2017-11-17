@@ -15,5 +15,5 @@ body { min-width: 2px; -webkit-font-smoothing: antialiased !important; -webkit-b
 .source__desc { font-size: 13px; line-height: 1.38; color: #fff; font-family: "futurabookc-webfont", Arial, sans-serif; font-weight: 300; }
 .source__index { display: inline-block; text-decoration: none; color: #fff; }
 .source__index:hover { opacity: 0.8; }
-.source__link { display: inline-block; max-width: 100%; text-decoration: none; color: #fff; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
+.source__link { display: inline-block; vertical-align: bottom; max-width: 100%; text-decoration: none; color: #fff; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
 .source__link:hover { opacity: 0.8; }
